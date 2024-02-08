@@ -12,8 +12,8 @@ const Footer = () => {
     <div className="max-w-[1170px] mx-auto py-5 p-3 md:flex md:justify-around">
 
     <div className="footerlogos ml-3 ">
-        <div className="interior-logo">
-        <img src={InteriorLogo} alt="My Image" className='w-[100px]' />
+        <div className="interior-logo mt-2">
+        <img src={InteriorLogo} alt="My Image" className='w-[120px]' />
         </div>
         <p class="md:text-center text-white py-2 font-canada">Social Networks</p>
         <div className="social-icon-box flex gap-2">
