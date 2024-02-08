@@ -5,7 +5,7 @@ import About from './components/About';
 function App() {
   return (
     <div className="App">
-      <h1>sachin</h1>
+      <h1>Umairah</h1>
       <About />
       <Footer />
     </div>
