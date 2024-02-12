@@ -20,7 +20,7 @@ function About() {
                 <h6 className='my-2 font-canada text-[#A15757]'>We provide an essential service for you</h6>
                 </div>
                 
-                <p className='my-2 font-canada'>With 15 Years of expertise, The Kitchen Art transforms spaces into functional works of art. Our modern modular kitchens seamlessly blend style and practicality, showcasing a commitment to timeless design.</p>
+                <p className='my-2 font-canada'>With <span className='font-semibold'>15 Years</span> of expertise, The Kitchen Art transforms spaces into functional works of art. Our modern modular kitchens seamlessly blend style and practicality, showcasing a commitment to timeless design.</p>
                 <button className=' my-2 bg-[#25285A] text-white px-10 py-1 rounded-lg font-canada '>GET STARTED</button>
             </div>
          </div>
