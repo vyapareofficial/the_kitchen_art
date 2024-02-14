@@ -29,7 +29,7 @@ const Testimonials = () => {
 
   return (
     
-    <section className="text-gray-600 body-font px-4 py-8 bg-gradient-to-b from-[#2e3161] to-[#55587f]" id="testimonial">
+    <section className="text-gray-600 body-font px-4 py-8 bg-[#a15757]" id="testimonial">
     <div className="container px-5 pb-14 mx-auto">
       <h1 className="text-3xl font-medium title-font text-white mb-8 text-center font-dm_serif_text">What Our Clients Say About Us</h1>
       
