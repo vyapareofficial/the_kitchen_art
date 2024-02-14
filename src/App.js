@@ -7,6 +7,8 @@ import Contact from './components/Contact';
 import Banner from './components/Banner';
 import Benefitss from './components/Benefitss';
 import Kitchenlayouts from './components/Kitchenlayouts';
+import Steps from './components/Steps';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
        <Benefitss/>
        <Banner/>
        <Kitchenlayouts/>
+       <Steps />
+      <Testimonials />
        <Contact />
       <Footer />
     </div>
