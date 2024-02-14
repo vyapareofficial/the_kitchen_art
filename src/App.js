@@ -4,14 +4,19 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Banner from './components/Banner';
+import Benefitss from './components/Benefitss';
+import Kitchenlayouts from './components/Kitchenlayouts';
+
 function App() {
   return (
     <div className="App">
-      <h1>sachin</h1>
-      <Services/>
-      <h1>Creating the kitchen</h1>
-      <About />
-<Contact />
+       <About />
+       <Services/>
+       <Benefitss/>
+       <Banner/>
+       <Kitchenlayouts/>
+       <Contact />
       <Footer />
     </div>
   );
