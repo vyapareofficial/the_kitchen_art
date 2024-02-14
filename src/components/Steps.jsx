@@ -1,7 +1,7 @@
 import React from 'react'
 import StepsImg from '../assets/images/steps2.png';
 
-const Steps = () => {
+const Steps = ({scrollToContact}) => {
   return (
     <div id="contactus" className="relative bg-cover bg-center" style={{ backgroundImage: `url(${StepsImg})` }}>
     <div className="absolute"></div>
@@ -35,7 +35,7 @@ const Steps = () => {
       </li>
     </ul>
 
-    <button className='bg-[#A15757] text-[white] px-3 py-3 font-roboto text-sm'>Book Consultation</button>
+    <button className='bg-[#A15757] text-[white] px-3 py-3 font-roboto text-sm'   onClick={scrollToContact} >Book Consultation</button>
 
 
 </div>

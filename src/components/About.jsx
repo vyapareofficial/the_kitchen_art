@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import AboutUsImg from '../assets/images/About_us.png';
-import { Link } from 'react-router-dom';
 
-function About() {
+function About({ scrollToContact }) {
   useEffect(() => {
     // Run this code when the component mounts or updates
     const button = document.getElementById('rotateButtonAbout');
@@ -32,6 +31,7 @@ function About() {
           </p>
           <button
             id="rotateButtonAbout"
+            onClick={scrollToContact} // Add this onClick handler
             className='my-3 mb-6 border-2 hover:border-[#25285A] hover:bg-white hover:text-[#25285A] transition duration-300 bg-[#25285A] text-white px-10 py-1 rounded-lg font-canada'
           >
             GET STARTED
