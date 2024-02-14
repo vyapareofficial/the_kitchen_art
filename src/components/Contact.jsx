@@ -3,7 +3,7 @@ import ContactUsImg from '../assets/images/contactus_backgroundimg.jpg';
 
 const Contact = () => {
   return (
-    <div id="contactus" className="relative bg-cover bg-center" style={{ backgroundImage: `url(${ContactUsImg})` }}>
+    <div id="contact" className="relative bg-cover bg-center"  style={{ backgroundImage: `url(${ContactUsImg})` }}>
     <div className="absolute"></div>
     
     <div className="max-w-[1170px] mx-auto py-20 p-3 md:flex md: place-content-end relative">

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import bannerimg from '../assets/images/bannerimg.png';
 
-const Banner = () => {
+const Banner = ({scrollToContact}) => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className='bg-[#F9EBEB] relative mt-20'>
+    <div className='bg-[#F9EBEB] relative mt-5 sm:mt-20'>
       {/* Desktop View */}
       <div className="hidden md:block container mx-auto flex items-center justify-start">
         <div className="max-w-2xl text-left p-4 md:p-2">
@@ -39,7 +39,7 @@ const Banner = () => {
           <button
             ref={buttonRef}
             className="border-2 border-[#A15757] text-[#A15757] px-4 py-2 font-medium hover:bg-[#A15757] hover:text-white transition duration-300"
-          >
+            onClick={scrollToContact}   >
             Speak To Our Expert
           </button>
         </div>
@@ -57,7 +57,7 @@ const Banner = () => {
           <button
             ref={buttonRef}
             className="border-2 border-[#A15757] text-[#A15757] px-4 py-2 font-medium hover:bg-[#A15757] hover:text-white transition duration-300"
-          >
+            onClick={scrollToContact}  >
             Speak To Our Expert
           </button>
         </div>

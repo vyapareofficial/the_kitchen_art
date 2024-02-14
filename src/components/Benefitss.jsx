@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Benefitss() {
+export default function Benefitss({ scrollToContact }) {
   return (
-    <div className="about_us py-5 mx-auto" id="about">
+    <div className="about_us py-5  mt-4 mx-auto" id="about">
       <div className="max-w-[1170px] mx-auto py-5 p-3 flex flex-col-reverse md:flex-row md:flex md:place-content-around">
 
         {/* left side content */}
@@ -70,7 +70,7 @@ Completion</p>
           </p>
           <button
   className='my-2 mb-6 border-2 hover:border-[#25285A] hover:bg-white hover:text-[#25285A] transition duration-300 bg-[#25285A] text-white px-10 py-1 rounded-lg font-canada'
-  style={{ transform: 'rotateY(360deg)' }}
+  style={{ transform: 'rotateY(360deg)' }}   onClick={scrollToContact} 
 >
   Book Consultation
 </button>

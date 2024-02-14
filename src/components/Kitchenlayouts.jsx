@@ -42,14 +42,14 @@ export default function Kitchenlayouts() {
   
 
   return (
-    <div className='mt-36'>
+    <div className='mt-5 sm:mt-36'>
         <h1 className='text-center  font-rubik text-xl'> MODULAR KITCHEN</h1>
         <h1 className='text-center font-dm_serif_text text-3xl'> Introducing Our Kitchen Layouts</h1>
     <div className="about_us py-5  mx-auto  " id="about">
          <div className="max-w-full mx-auto py-5 p-3 flex flex-col-reverse md:flex-row md:flex md:place-content-around">
             <div className="about_us_info flex   md:place-content-center sm:w-[30%]  ">
             <div className="flex items-center ">
-            <div className="ml-4 border-l-2 border-solid border-[#890809] pl-4">
+            <div className="ml-4 border-l-4 border-solid border-[#890809] pl-4">
   <p
     className={`text-xl text-[#25285A] font-roboto font-normal mb-3 sm:mb-6 cursor-pointer ${selectedLayout === 'Island' ? 'font-extrabold text-[#A15757]  border-b-2 border-[#A15757] transition-all duration-400' : ''}`}
     onClick={() => handleLayoutClick('Island')}
