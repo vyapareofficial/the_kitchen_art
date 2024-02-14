@@ -10,6 +10,7 @@ import Kitchenlayouts from './components/Kitchenlayouts';
 import Steps from './components/Steps';
 import Testimonials from './components/Testimonials';
 import BackToTopButton from './components/Backtotbutton';
+import Herosection from './components/Herosection';
 
 function App() {
   const contactRef = useRef(null);
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <BackToTopButton/>
+      <Herosection />
       <About scrollToContact={scrollToContact} />
       <Services />
       <Steps scrollToContact={scrollToContact} />
