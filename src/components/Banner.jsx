@@ -33,12 +33,12 @@ const Banner = ({scrollToContact}) => {
       {/* Desktop View */}
       <div className="hidden md:block container mx-auto flex items-center justify-start">
         <div className="max-w-2xl text-left p-4 md:p-2">
-          <h3 className="text-xl md:text-4xl font-semibold font-faustine mb-4 md:mb-6">
+          <h2 className="text-xl md:text-3xl font-semibold font-faustine mb-4 md:mb-6">
             BEGIN THE JOURNEY TO YOUR DREAM KITCHEN
-          </h3>
-          <button
+          </h2>
+           <button
             ref={buttonRef}
-            className="border-2 border-[#A15757] text-[#A15757] px-4 py-2 font-medium hover:bg-[#A15757] hover:text-white transition duration-300"
+            className="border-2 border-[#A15757] text-[#A15757] px-3 py-2 font-medium hover:bg-[#A15757] hover:text-white transition duration-300"
             onClick={scrollToContact}   >
             Speak To Our Expert
           </button>
@@ -70,3 +70,5 @@ const Banner = ({scrollToContact}) => {
 };
 
 export default Banner;
+
+

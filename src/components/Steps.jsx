@@ -8,7 +8,7 @@ const Steps = ({scrollToContact}) => {
     
     <div className="max-w-[1170px] mx-auto py-20 p-3 md:flex md: place-content-end relative">
 <div className="contact-field md:w-[40%] p-[1rem] relative z-10 bg-white shadow-2xl">
-<h2 className=' my-2 text-4xl font-normal font-dm_serif_text'>5 Steps To Your <br/> Kitchen</h2>
+<h2 className=' my-2  text-4xl font-normal font-dm'>5 Steps To Your <br/> Kitchen</h2>
 
 
 <ul className="relative">

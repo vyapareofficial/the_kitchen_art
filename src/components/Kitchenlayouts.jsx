@@ -44,7 +44,7 @@ export default function Kitchenlayouts() {
   return (
     <div className='mt-5 sm:mt-36'>
         <h1 className='text-center  font-rubik text-xl'> MODULAR KITCHEN</h1>
-        <h1 className='text-center font-dm_serif_text text-3xl'> Introducing Our Kitchen Layouts</h1>
+        <h1 className='text-center  text-4xl font-normal font-dm'> Introducing Our Kitchen Layouts</h1>
     <div className="about_us py-5  mx-auto  " id="about">
          <div className="max-w-full mx-auto py-5 p-3 flex flex-col-reverse md:flex-row md:flex md:place-content-around">
             <div className="about_us_info flex   md:place-content-center sm:w-[30%]  ">

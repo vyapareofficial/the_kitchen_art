@@ -61,7 +61,7 @@ Completion</p>
         {/* right side content */}
         <div className="about_us_info md:w-[50%]">
           <h5 className='my-2 text-[#25285A] text-1xl font-medium font-rubik '>WHY CHOOSE US?</h5>
-          <h2 className='my-2 text-4xl font-normal font-dm'>Benefits Of Choosing<br/>The Kitchen Art</h2>
+          <h2 className='my-1 text-4xl font-normal font-dm'>Benefits Of Choosing<br/>The Kitchen Art</h2>
           <div className="service_tagline flex gap-5">
             {/* Add content for service tagline */}
           </div>

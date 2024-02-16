@@ -11,6 +11,10 @@ import Steps from './components/Steps';
 import Testimonials from './components/Testimonials';
 import BackToTopButton from './components/Backtotbutton';
 import Herosection from './components/Herosection';
+import Navbar from './components/Navbar';
+import WhatsAppButton from './components/Whatsappbutton';
+import Heronew from './components/Heronew';
+
 
 function App() {
   const contactRef = useRef(null);
@@ -22,9 +26,18 @@ function App() {
     }
   };
 
+  const scrollToAboutus = () => {
+    const aboutElement = document.getElementById('about');
+    if (aboutElement) {
+      aboutElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="App">
       <BackToTopButton/>
+      <WhatsAppButton/>
+      <Navbar scrollToContact={scrollToContact} />
       <Herosection />
       <About scrollToContact={scrollToContact} />
       <Services />
