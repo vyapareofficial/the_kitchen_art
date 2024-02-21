@@ -1,14 +1,28 @@
 import React from 'react'
 import ContactUsImg from '../assets/images/contactus_backgroundimg.jpg';
+import  { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
+  useEffect(() => {
+    const initAOS = () => {
+      AOS.init({ duration: 2000 });
+    };
+  
+    // Delay initialization to make sure images are loaded
+    const delay = setTimeout(initAOS, 500);
+  
+    return () => clearTimeout(delay); // Cleanup on component unmount
+  }, []);
+
   return (
-    <div id="contact" className="relative bg-cover bg-center"  style={{ backgroundImage: `url(${ContactUsImg})` }}>
+    <div  id="contact" className="relative bg-cover bg-center overflow-hidden"  style={{ backgroundImage: `url(${ContactUsImg})` }}>
     <div className="absolute"></div>
-    
-    <div className="max-w-[1170px] mx-auto py-20 p-3 md:flex md: place-content-end relative">
+    <h1 data-aos='slide-down' className='title-font text-white  mt-12 text-center  text-5xl font-normal font-dm'>Get In Touch</h1>
+    <div data-aos='slide-right' className="max-w-[1170px] mx-auto py-20 p-3 md:flex md: place-content-end relative overflow-hidden">
 <div className="contact-field md:w-[50%] p-[1rem] relative z-10 inset-0 bg-black opacity-75">
-  <form>
+  <form action='https://formspree.io/f/mrgnqwby' method='POST'>
     <input
       type="text"
       name="name"

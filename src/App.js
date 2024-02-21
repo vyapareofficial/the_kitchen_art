@@ -1,3 +1,5 @@
+// App.js
+
 import React, { useRef } from 'react';
 import './App.css';
 import Footer from './components/Footer';
@@ -33,21 +35,31 @@ function App() {
     }
   };
 
+  const scrollToService = () => {
+    const serviceElement = document.getElementById('service');
+    if (serviceElement) {
+      serviceElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="App">
       <BackToTopButton/>
       <WhatsAppButton/>
-      <Navbar scrollToContact={scrollToContact} />
+      <Navbar
+        scrollToContact={scrollToContact}
+        scrollToAboutus={scrollToAboutus}
+        scrollToService={scrollToService}
+      />
       <Herosection />
       <About scrollToContact={scrollToContact} />
-      <Services />
+      <Services scrollToService={scrollToService} />
       <Steps scrollToContact={scrollToContact} />
-      <Benefitss scrollToContact={scrollToContact} />
+      <Benefitss scrollToContact={scrollToContact} /> 
       <Banner scrollToContact={scrollToContact}  />
       <Kitchenlayouts />
       <Testimonials />
-      <Contact ref={contactRef} />
-      
+      <Contact ref={contactRef} /> 
       <Footer />
     </div>
   );

@@ -31,6 +31,10 @@ import Lshape from '../assets/images/Lshape.jpg';
 import Ushape from '../assets/images/Ushape.jpg';
 import Parallelshape from '../assets/images/Parallelshape.jpg';
 import Straightshape from '../assets/images/Straightshape.jpg';
+import  { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 export default function Kitchenlayouts() {
 
@@ -39,15 +43,25 @@ export default function Kitchenlayouts() {
   const handleLayoutClick = (layout) => {
     setSelectedLayout(layout);
   };
+  useEffect(() => {
+    const initAOS = () => {
+      AOS.init({ duration: 2000 });
+    };
+  
+    // Delay initialization to make sure images are loaded
+    const delay = setTimeout(initAOS, 500);
+  
+    return () => clearTimeout(delay); // Cleanup on component unmount
+  }, []);
   
 
   return (
-    <div className='mt-5 sm:mt-36'>
-        <h1 className='text-center  font-rubik text-xl'> MODULAR KITCHEN</h1>
-        <h1 className='text-center  text-4xl font-normal font-dm'> Introducing Our Kitchen Layouts</h1>
-    <div className="about_us py-5  mx-auto  " id="about">
+    <div className='mt-5 sm:mt-36 overflow-hidden'>
+        <h1 data-aos='slide-up' className='text-center  font-rubik text-xl'> MODULAR KITCHEN</h1>
+        <h1 data-aos='slide-up' className='text-center  text-4xl font-normal font-dm'> Introducing Our Kitchen Layouts</h1>
+    <div  className="about_us py-5  mx-auto  " id="about">
          <div className="max-w-full mx-auto py-5 p-3 flex flex-col-reverse md:flex-row md:flex md:place-content-around">
-            <div className="about_us_info flex   md:place-content-center sm:w-[30%]  ">
+            <div  data-aos='fade-right' className="about_us_info flex   md:place-content-center sm:w-[30%]  ">
             <div className="flex items-center ">
             <div className="ml-4 border-l-4 border-solid border-[#890809] pl-4">
   <p
@@ -84,7 +98,7 @@ export default function Kitchenlayouts() {
 
             </div>
             </div>
-            <div className="about_us_img flex   md:place-content-center mb sm:w-[70%]  mb-4 relative">
+            <div data-aos='fade-left' className="about_us_img flex   md:place-content-center mb sm:w-[70%]  mb-4 relative">
             <img
   src={
     selectedLayout === 'LShape' ? Lshape :
@@ -94,7 +108,7 @@ export default function Kitchenlayouts() {
     islandlay
   }
   alt=""
-  className='sm:h-[500px] w-full'
+  className='h-[350px] sm:h-[500px] w-full'
 />
 
 <div className="absolute bottom-0 left-0 mb-2 ml-2 flex items-center">

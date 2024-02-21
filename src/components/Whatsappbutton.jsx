@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-16 right-4 z-40 p-2 rounded-full bg-green-500 text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 flex items-center justify-center"
+      className="fixed bottom-16  right-4 z-50 p-2 rounded-full bg-green-500 text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 flex items-center justify-center "
       style={{ width: '50px', height: '50px' }}
     >
       <FontAwesomeIcon icon={faWhatsapp} style={{ fontSize: '35px' }} />

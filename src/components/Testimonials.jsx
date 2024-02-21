@@ -2,8 +2,21 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import  { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Testimonials = () => {
+  useEffect(() => {
+    const initAOS = () => {
+      AOS.init({ duration: 2000 });
+    };
+  
+    // Delay initialization to make sure images are loaded
+    const delay = setTimeout(initAOS, 500);
+  
+    return () => clearTimeout(delay); // Cleanup on component unmount
+  }, []);
 
   function Arrow(props) {
     const { className, style, onClick } = props;
@@ -29,13 +42,13 @@ const Testimonials = () => {
 
   return (
     
-    <section className="text-gray-600 body-font px-4 py-8 bg-[#a15757]" id="testimonial">
+    <section className="text-gray-600 body-font px-4 py-8 bg-[#a15757]" id="testimonial overflow-hidden">
     <div className="container px-5 pb-14 mx-auto">
-      <h1 className="title-font text-white mb-8 text-center  text-4xl font-normal font-dm">What Our Clients Say About Us</h1>
+      <h1 data-aos='slide-down' className="title-font text-white mb-8 text-center  text-4xl font-normal font-dm">What Our Clients Say About Us</h1>
       
       <Slider {...settings}>
-      <div>
-      <div className="flex flex-wrap -m-4">
+      <div >
+      <div  className="flex  flex-wrap -m-4">
         <div className="p-4 sm:p-8 w-full">
           <div className="h-full bg-gray-100 p-8 rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#890809" className="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
