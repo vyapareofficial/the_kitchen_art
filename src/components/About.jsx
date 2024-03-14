@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import AboutUsImg from '../assets/images/About_us.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function About({ scrollToContact }) {
   useEffect(() => {
+    AOS.init({duration: 2000});
     // Run this code when the component mounts or updates
     const button = document.getElementById('rotateButtonAbout');
     if (button) {
@@ -12,12 +15,12 @@ function About({ scrollToContact }) {
   }, []);
 
   return (
-    <div className="about_us py-5 mx-auto" id="about">
+    <div className="about_us py-5 mx-auto overflow-hidden" id="about">
       <div className="max-w-[1170px] mx-auto py-5 p-3 flex flex-col-reverse md:flex-row md:flex md:place-content-around">
-        <div className="about_us_img flex py-2 md:py-0 md:place-content-center md:w-[50%]">
+        <div className="about_us_img flex py-2 md:py-0 md:place-content-center md:w-[50%]" data-aos="slide-right">
           <img src={AboutUsImg} alt="" className="md:w-[50%]" />
         </div>
-        <div className="about_us_info md:w-[50%]">
+        <div className="about_us_info md:w-[50%]" data-aos="slide-left">
           <h5 className="my-2 text-[#25285A] text-1xl font-medium font-rubik">ABOUT US</h5>
           <h2 className="my-2 text-4xl font-normal font-dm">Welcome To The <br /> Kitchen Art</h2>
           <div className="service_tagline flex gap-5">

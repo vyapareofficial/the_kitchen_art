@@ -14,6 +14,7 @@ import Herosection from './components/Herosection';
 import Navbar from './components/Navbar';
 import WhatsAppButton from './components/Whatsappbutton';
 import Heronew from './components/Heronew';
+import Modularwardrobe from './components/Modularwardrobe';
 
 
 function App() {
@@ -21,6 +22,27 @@ function App() {
 
   const scrollToContact = () => {
     const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToModularwardrobe = () => {
+    const contactElement = document.getElementById('Modularwardrobe');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToModularkitchen = () => {
+    const contactElement = document.getElementById('Modularkitchen');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToService = () => {
+    const contactElement = document.getElementById('Service');
     if (contactElement) {
       contactElement.scrollIntoView({ behavior: 'smooth' });
     }
@@ -37,18 +59,19 @@ function App() {
     <div className="App">
       <BackToTopButton/>
       <WhatsAppButton/>
-      <Navbar scrollToContact={scrollToContact} />
-      <Herosection />
+      <Navbar scrollToContact={scrollToContact} scrollToModularwardrobe={scrollToModularwardrobe} scrollToModularkitchen={scrollToModularkitchen} scrollToService={scrollToService} scrollToAboutus={scrollToAboutus}  />
+      <Herosection scrollToContact={scrollToContact} />
       <About scrollToContact={scrollToContact} />
       <Services />
       <Steps scrollToContact={scrollToContact} />
       <Benefitss scrollToContact={scrollToContact} />
       <Banner scrollToContact={scrollToContact}  />
       <Kitchenlayouts />
+      <Modularwardrobe />
       <Testimonials />
       <Contact ref={contactRef} />
       
-      <Footer />
+      <Footer scrollToContact={scrollToContact} scrollToAboutus={scrollToAboutus} scrollToService={scrollToService} scrollToModularkitchen={scrollToModularkitchen} />
     </div>
   );
 }

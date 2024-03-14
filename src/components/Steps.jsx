@@ -1,12 +1,19 @@
 import React from 'react'
 import StepsImg from '../assets/images/steps2.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Steps = ({scrollToContact}) => {
+  useEffect(() => {
+    AOS.init({duration: 2000});
+  }, []);
+
   return (
-    <div id="contactus" className="relative bg-cover bg-center" style={{ backgroundImage: `url(${StepsImg})` }}>
+    <div id="contactus" className="relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${StepsImg})` }}>
     <div className="absolute"></div>
     
-    <div className="max-w-[1170px] mx-auto py-20 p-3 md:flex md: place-content-end relative">
+    <div className="max-w-[1170px] mx-auto py-20 p-3 md:flex md: place-content-end relative" data-aos="slide-right" >
 <div className="contact-field md:w-[40%] p-[1rem] relative z-10 bg-white shadow-2xl">
 <h2 className=' my-2  text-4xl font-normal font-dm'>5 Steps To Your <br/> Kitchen</h2>
 

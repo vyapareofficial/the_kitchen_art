@@ -4,7 +4,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+917208559662'; // Replace with your phone number
+    const phoneNumber = '+919819953650'; // Replace with your phone number
     const message = 'Hello! I have a question.'; // Replace with your predefined message
     const encodedMessage = encodeURIComponent(message);
     const encodedPhoneNumber = encodeURIComponent(phoneNumber);

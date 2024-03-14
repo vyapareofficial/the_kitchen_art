@@ -2,8 +2,15 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Testimonials = () => {
+
+  useEffect(() => {
+    AOS.init({duration: 2000});
+  }, []);
 
   function Arrow(props) {
     const { className, style, onClick } = props;
@@ -29,9 +36,9 @@ const Testimonials = () => {
 
   return (
     
-    <section className="text-gray-600 body-font px-4 py-8 bg-[#a15757]" id="testimonial">
+    <section className="text-gray-600 body-font px-4 py-8 bg-[#a15757] overflow-hidden" id="testimonial">
     <div className="container px-5 pb-14 mx-auto">
-      <h1 className="title-font text-white mb-8 text-center  text-4xl font-normal font-dm">What Our Clients Say About Us</h1>
+      <h1 className="title-font text-white mb-8 text-center  text-4xl font-normal font-dm" data-aos="slide-down" >What Our Clients Say About Us</h1>
       
       <Slider {...settings}>
       <div>

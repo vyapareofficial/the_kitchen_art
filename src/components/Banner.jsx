@@ -1,10 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import bannerimg from '../assets/images/bannerimg.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Banner = ({scrollToContact}) => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
+
+    AOS.init({duration: 2000});
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -49,8 +54,8 @@ const Banner = ({scrollToContact}) => {
       </div>
 
       {/* Mobile View */}
-      <div className="md:hidden container mx-auto flex flex-col items-center">
-        <div className="max-w-2xl text-left p-4 md:p-2">
+      <div className="md:hidden container mx-auto flex flex-col items-center overflow-hidden">
+        <div className="max-w-2xl text-left p-4 md:p-2" data-aos="slide-right">
           <h1 className="text-xl md:text-xl font-semibold font-faustine mb-4 md:mb-6">
             BEGIN THE JOURNEY TO YOUR DREAM KITCHEN
           </h1>
@@ -61,7 +66,7 @@ const Banner = ({scrollToContact}) => {
             Speak To Our Expert
           </button>
         </div>
-        <div className="p-10">
+        <div className="p-10" data-aos="slide-left">
           <img src={bannerimg} alt="Banner Image" className='h-[300px]' />
         </div>
       </div>

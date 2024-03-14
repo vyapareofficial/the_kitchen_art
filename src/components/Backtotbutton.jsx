@@ -27,7 +27,7 @@ const BackToTopButton = () => {
     showButton && (
       <button
         onClick={handleScrollToTop}
-        className="fixed bottom-4 right-6 z-40 p-2  bg-[#A15757] text-white hover:bg-[] focus:outline-none focus:ring-2 focus:ring-[#A15757] flex items-center justify-center"
+        className="fixed bottom-4 right-6 z-40 p-2  bg-[#25285a] text-white hover:bg-[] focus:outline-none focus:ring-2 focus:ring-[#A15757] flex items-center justify-center"
         style={{ width: '36px', height: '36px' }}
       >
         <svg

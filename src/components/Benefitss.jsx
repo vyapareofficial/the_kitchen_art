@@ -1,12 +1,20 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 export default function Benefitss({ scrollToContact }) {
+  useEffect(() => {
+    AOS.init({duration: 2000});
+  }, []);
+
   return (
-    <div className="about_us py-5  mt-4 mx-auto" id="about">
+    <div className="about_us py-5  mt-4 mx-auto overflow-hidden" id="about">
       <div className="max-w-[1170px] mx-auto py-5 p-3 flex flex-col-reverse md:flex-row md:flex md:place-content-around">
 
         {/* left side content */}
-        <div className="grid gap-4 grid-cols-2 md:place-content-center md:w-[50%]">
+        <div className="grid gap-4 grid-cols-2 md:place-content-center md:w-[50%]" data-aos="slide-right">
           {/* Container 1 */}
           <div className="flex-1 mx-2 bg-gradient-to-b  from-[#890809] to-[#EF7172] sm:h-[150px] md:w-[250px] rounded-br-xl flex flex-col items-center justify-center">
             {/* Add content for container 1 */}
@@ -59,7 +67,7 @@ Completion</p>
         </div>
 
         {/* right side content */}
-        <div className="about_us_info md:w-[50%]">
+        <div className="about_us_info md:w-[50%]" data-aos="slide-left">
           <h5 className='my-2 text-[#25285A] text-1xl font-medium font-rubik '>WHY CHOOSE US?</h5>
           <h2 className='my-1 text-4xl font-normal font-dm'>Benefits Of Choosing<br/>The Kitchen Art</h2>
           <div className="service_tagline flex gap-5">
