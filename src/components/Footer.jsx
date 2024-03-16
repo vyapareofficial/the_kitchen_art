@@ -38,19 +38,19 @@ const Footer = ({scrollToAboutus,scrollToService,scrollToModularkitchen,scrollTo
         <h2 class="text-[#F8CB89] text-[30px]">CONTACT US</h2>
 
         <div className="address text-white py-1">
-          <h6 className='font-canada'>Address</h6>
+          <h6 className='font-canada'>Address :</h6>
           <p className='font-canada'>16/123, Unnat Nagar, Part 3, M.G. Road, Goregaon (W),<br></br> Near Gajanan Maharaj Mandir, Mumbai 400062.</p>
         </div>
 
         <div className="phone text-white py-1">
-        <h6 className='font-canada'>Phone</h6>
+        <h6 className='font-canada'>Phone :</h6>
           <p className='font-canada'>+91 9819953650</p>
           <p className='font-canada'>+91 9967208838</p>
 
         </div>
 
         <div className="email text-white py-1">
-        <h6 className='font-canada'>Email</h6>
+        <h6 className='font-canada'>Email Id :</h6>
           <p className='font-canada'>thekitchenart2018@gmail.com </p>
 
         </div>
